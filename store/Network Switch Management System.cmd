@@ -1,1 +1,0 @@
-@java --module-path "C:\Users\wloo\Google Drive\WOU\WOU Course\Sem 10\Final Year Project\Installers\openjfx-17.0.0.1_windows-x64_bin-sdk\javafx-sdk-17.0.0.1\lib" --add-modules javafx.controls,javafx.fxml -jar Network_Switch_Management_System.jar
