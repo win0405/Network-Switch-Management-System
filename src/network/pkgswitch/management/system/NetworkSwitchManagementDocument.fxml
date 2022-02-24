@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="network.pkgswitch.management.system.NetworkSwitchManagementDocumentController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="24.0" prefHeight="40.0" prefWidth="1512.0" text="Network Switch Management System" textFill="RED">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="78.0" prefHeight="40.0" prefWidth="1512.0" text="Network Switch Management" textFill="BLUE">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWelcome" alignment="CENTER" layoutX="14.0" layoutY="148.0" prefHeight="40.0" prefWidth="1512.0" text="Welcome" textFill="#00c800">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="lnkLogout" layoutX="1401.0" layoutY="17.0" onAction="#lnkLogoutAction" text="Logout">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Hyperlink>
+      <TableView fx:id="tblNetworkSwitches" layoutX="14.0" layoutY="258.0" prefHeight="218.0" prefWidth="1512.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="15.0" layoutY="228.0" text="Network Switches:" textFill="#c83f64" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="218.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="494.0" text="New Network Switch" textFill="#c83f64" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="544.0" text="Name:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="544.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="135.0" layoutY="538.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="15.0" layoutY="596.0" text="IP Address:">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIPAddress" layoutX="135.0" layoutY="590.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="15.0" layoutY="650.0" text="MAC Address:">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMACAddress" layoutX="135.0" layoutY="644.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="15.0" layoutY="700.0" text="Status:">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStatus" layoutX="135.0" layoutY="700.0" prefHeight="20.0" prefWidth="85.0" text="---">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCheckStatus" layoutX="240.0" layoutY="694.0" mnemonicParsing="false" onAction="#btnCheckStatusAction" text="Check Status">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSaveNetworkSwitch" layoutX="14.0" layoutY="753.0" mnemonicParsing="false" onAction="#btnSaveNetworkSwitchAction" prefHeight="34.0" prefWidth="344.0" text="Save Network Switch" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" layoutX="416.0" layoutY="753.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="34.0" prefWidth="1111.0" text="Back" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReloadFromDatabase" layoutX="1223.0" layoutY="491.0" mnemonicParsing="false" onAction="#btnReloadFromDatabaseAction" prefHeight="34.0" prefWidth="303.0" text="Reload from Database">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCheckStatusOfAllNetworkSwitches" layoutX="1223.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnCheckStatusOfAllNetworkSwitchesAction" text="Check Status of All Network Switches">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExportToExcel" layoutX="1223.0" layoutY="580.0" mnemonicParsing="false" onAction="#btnExportToExcelAction" prefHeight="33.0" prefWidth="303.0" text="Export to Excel">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

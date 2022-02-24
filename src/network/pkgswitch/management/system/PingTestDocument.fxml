@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="740.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="network.pkgswitch.management.system.PingTestDocumentController">
+   <children>
+      <Label layoutX="196.0" layoutY="24.0" text="Network Switch Management System" textFill="RED">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="86.0" text="Ping Test" textFill="BLUE">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWelcome" alignment="CENTER" layoutX="196.0" layoutY="148.0" prefHeight="40.0" prefWidth="547.0" text="Welcome" textFill="#00c800">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="lnkLogout" layoutX="781.0" layoutY="17.0" onAction="#lnkLogoutAction" text="Logout">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="96.0" layoutY="240.0" text="Enter IP Address:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIPAddress" layoutX="391.0" layoutY="232.0" prefHeight="44.0" prefWidth="436.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnPerformPingTest" layoutX="96.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnPerformPingTestAction" prefHeight="44.0" prefWidth="730.0" text="Perform Ping Test">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="96.0" layoutY="382.0" text="Status:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStatus" layoutX="196.0" layoutY="382.0" prefHeight="28.0" prefWidth="335.0" text="---">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAddToDatabase" layoutX="589.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnAddToDatabaseAction" prefHeight="44.0" prefWidth="237.0" text="Add to Database">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" layoutX="668.0" layoutY="682.0" mnemonicParsing="false" onAction="#btnBackAction" prefHeight="44.0" prefWidth="237.0" text="Back">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="txtPingStatus" layoutX="96.0" layoutY="428.0" prefHeight="246.0" prefWidth="730.0">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
